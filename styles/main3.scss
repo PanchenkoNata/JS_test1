@@ -1,0 +1,39 @@
+
+body {
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 200px;
+        grid-template-areas: "a b c";
+        
+
+        .test1 {
+            grid-area: a;
+            background: #aa77aa;
+        }
+        .test2 {
+            grid-area: b;
+        }
+        .test3 {
+            grid-area: c;
+            background: #9edf27;
+        }
+        
+
+        div {
+            background: #aaaaaa;
+            border: 2px solid #aa77ff;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .wrapper {
+            grid-template-areas: "c b a";
+        }
+    }
+    
+    
+}
+
+
+            

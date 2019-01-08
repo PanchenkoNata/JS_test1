@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS__if_else</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="styles/main3.css">
+    
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="test1">1</div>
+        <div class="test2">2</div>
+        <div class="test3">3</div>
+    </div>
+
+    <script>
+        const sign1 = 'red';
+        const sign2 = 'yellow';
+        const sign3 = 'green';
+
+        let sign = 'greensd';
+
+        if ( sign === sign1 ) {
+            console.log( 'Stand, do not cross the road' );
+        } else if ( sign === sign2 ) {
+            console.log( 'Attention, the traffic signal will change soon' );
+        } else if ( sign === sign3 ) {
+            console.log( 'You can cross the road' );
+        } else {
+            console.log( 'This is not a traffic signal' );
+        }
+
+        console.log( 'Alarm system' );
+        let door = true;
+        let alarmSystem = false;
+
+        if ( door ) {
+            if ( alarmSystem ) {
+                console.log( 'Alarm!!!' );
+            } else {
+                console.log( 'Door is open' );
+            }
+        } else {
+            if ( alarmSystem ) {
+                console.log( 'OK' );
+            } else {
+                console.log( 'Alarm system is off' );
+            }
+        }
+    </script>
+</body>
+
+</html>

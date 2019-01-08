@@ -1,0 +1,41 @@
+body .wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 200px;
+      grid-template-rows: 200px;
+      grid-template-areas: "a b c";
+}
+
+body .wrapper .test1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: a;
+  background: #aa77aa;
+}
+
+body .wrapper .test2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: b;
+}
+
+body .wrapper .test3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: c;
+  background: #9edf27;
+}
+
+body .wrapper div {
+  background: #aaaaaa;
+  border: 2px solid #aa77ff;
+}
+
+@media screen and (max-width: 600px) {
+  body .wrapper {
+        grid-template-areas: "c b a";
+  }
+}
+/*# sourceMappingURL=main3.css.map */
