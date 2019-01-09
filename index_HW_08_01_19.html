@@ -4,11 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>JS__if_else</title>
+	<title>JS__For_and_Random</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" href="styles/main3.css">
-    
-
 </head>
 
 <body>
@@ -23,12 +21,12 @@
         const sign2 = 'yellow';
         const sign3 = 'green';
 
-        //Print numbers
+        // Print 10 numbers
         for (let i = 1; i <= 10; i++) {
             console.log(i);
         }
 
-        //Print Array
+        // Print Array
         console.log('*** print Array ***');
         let array3 = ['one', 'two', 'three', 'four', 'five', 'six', ];
         console.log(array3);
@@ -39,7 +37,7 @@
         }
         console.log(printArray);
 
-        //Print properties of Object
+        // Print properties of Object
         console.log('*** property : value of object ***');
         let car = {
             name : 'audi',
@@ -52,7 +50,26 @@
             console.log(`${prop} : ${value}`);
         }
 
-        
+        // 10 random numbers in interval [5, 20]
+        console.log('*** random numbers ***');
+        let minNum = 0;
+        let maxNum = 100000;
+        let arrayRandomNum = [];
+        for (let counter = 0; ; ) {
+            let randomNumber = Math.floor(Math.random() * (maxNum - minNum)) + minNum;
+            
+            if (randomNumber >= 5 && randomNumber <= 20) {
+                arrayRandomNum[counter] = randomNumber;
+                counter += 1;
+            }
+            if (counter == 10) {
+                break;
+            }
+        }
+        for (let i = 0; i < arrayRandomNum.length; i++) {
+            console.log(arrayRandomNum[i]);
+        }
+
     </script>
 </body>
 
