@@ -52,6 +52,59 @@
                 console.log( 'Alarm system is off' );
             }
         }
+
+        let stud = {
+            age : 21,
+            name : 'Slavik',
+            surname : 'Vorontsov',
+        }
+
+        let person = {
+            name : 'Elena',
+            city : 'Kyiv',
+        }
+
+        console.log(stud.name);
+        console.log(person.city);
+        console.trace();
+
+        let testFunc = () => {
+            console.trace();
+        }
+        testFunc();
+
+        let a = { num : 2 };
+        let b = a.num;
+        a.num = 10;
+        console.log(a);
+        console.log(b);
+
+        let array = ['apple', 'banana', 'kiwi',];
+        let c = array[0];
+        console.log(c);
+
+        let a2 = 'apple';
+        console.log(a2 [3]);
+
+        let a3 = 0.1 + 0.2;
+        console.log(a3); 
+
+        let str = '10px';
+        let num1 = Number(str);
+        let num2 = parseInt(str);
+        let num3 = parseFloat(str, 8);
+        console.log(typeof str);
+        console.log(str);
+        console.log(typeof num1);
+        console.log(num2);
+
+        let str1 = 'abc';
+        let str2 = 'fde';
+        let str3 = str1 + str2;
+        console.log(str3);
+        let str4 = `${str1} ${str2}`;
+        console.log(str4);
+        
     </script>
 </body>
 

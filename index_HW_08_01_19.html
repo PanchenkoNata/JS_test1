@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS__if_else</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="styles/main3.css">
+    
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="test1">1</div>
+        <div class="test2">2</div>
+        <div class="test3">3</div>
+    </div>
+
+    <script>
+        const sign1 = 'red';
+        const sign2 = 'yellow';
+        const sign3 = 'green';
+
+        //Print numbers
+        for (let i = 1; i <= 10; i++) {
+            console.log(i);
+        }
+
+        //Print Array
+        console.log('*** print Array ***');
+        let array3 = ['one', 'two', 'three', 'four', 'five', 'six', ];
+        console.log(array3);
+        let printArray = '';
+        for (let i = 0; i < array3.length; i++) {
+            console.log(array3[i]);
+            printArray = `${printArray} ${array3[i]}`;
+        }
+        console.log(printArray);
+
+        //Print properties of Object
+        console.log('*** property : value of object ***');
+        let car = {
+            name : 'audi',
+            owner : 'Petrov',
+            maxSpeed : 220,
+            price : 55000,
+        }
+        for (let prop in car) {
+            let value = car[prop];
+            console.log(`${prop} : ${value}`);
+        }
+
+        
+    </script>
+</body>
+
+</html>
