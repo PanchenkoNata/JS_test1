@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS__For_and_Random</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="styles/main3.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="test1">1</div>
+        <div class="test2">2</div>
+        <div class="test3">3</div>
+    </div>
+
+    <script>
+        let users = [
+            { name: 'Anna', birthdayDate: 28, birthdayMonth: 6, birthdayYear: 1998 },
+            { name: 'Ivan', birthdayDate: 16, birthdayMonth: 0, birthdayYear: 2018 },
+            { name: 'Anton', birthdayDate: 13, birthdayMonth: 0, birthdayYear: 2018 },
+            { name: 'Nina', birthdayDate: 17, birthdayMonth: 0, birthdayYear: 2020 },
+            { name: 'Maria', birthdayDate: 01, birthdayMonth: 0, birthdayYear: 1928 },
+        ];
+
+        const User = function(user) {
+            this.name = user.name;
+            this.birthdayYear = user.birthdayYear;
+            this.birthdayMonth = user.birthdayMonth;
+            this.birthdayDate = user.birthdayDate;
+
+            this.getAge = () => {
+                let now = new Date();
+                let age = now.getFullYear() - this.birthdayYear;
+                if (now.getMonth() - this.birthdayMonth < 0) {
+                    age -= 1;
+                } else if (( now.getMonth() - this.birthdayMonth == 0 ) && ( now.getDate() - this.birthdayDate <= 0 )) {
+                    age -= 1;
+                }
+
+                if ( age < 0 ) {
+                    return 'This user do not yet born';
+                }
+                return age;
+            }
+        }
+
+        for ( let user of users ) {
+            const obj = new User(user);
+            console.log(obj.getAge());
+        }
+
+    </script>
+</body>
+
+</html>

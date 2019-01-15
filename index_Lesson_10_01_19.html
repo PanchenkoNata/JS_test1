@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS__For_and_Random</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="styles/main3.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="test1">1</div>
+        <div class="test2">2</div>
+        <div class="test3">3</div>
+    </div>
+
+    <script>
+        const sign1 = 'red';
+        const sign2 = 'yellow';
+        const sign3 = 'green';
+
+//  создаем объект как ассоциативный массив
+        let obj = { 
+            name : 'Alex',
+            surname : 'Litv',
+            getFullname : function() {
+                return `${this.surname} ${this.name}`;
+            }
+        }
+        const fullname = obj.getFullname();
+        console.log(fullname);
+ // создаем объект при помощи функции конструктора
+        const people = [
+            { name: 'Alex1', surname: 'Litv1' },
+            { name: 'Alex2', surname: 'Litv2' },
+            { name: 'Alex3', surname: 'Litv3' },
+        ]
+
+        // это функция конструктор, ее имя пишется с большой буквы
+        const Human = function(data) {
+            this.name = data.name;
+            this.surname = data.surname;
+            this.getFullname = () => {
+                return `${data.surname} ${data.name}`;
+            }
+        }
+        
+        const obj2 = new Human(people[0]);
+        console.log(obj2);
+
+        for( let payload of people ) {
+            const obj = new Human(payload);
+            console.log(obj);
+        }
+
+    </script>
+</body>
+
+</html>
