@@ -6,106 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>JS__if_else</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-    <link rel="stylesheet" href="styles/main3.css">
+    <link rel="stylesheet" href="styles/main.css">
     
 
 </head>
 
 <body>
     <div class="wrapper">
-        <div class="test1">1</div>
-        <div class="test2">2</div>
-        <div class="test3">3</div>
+        <img src="/images/kotiki-31.jpg" alt="">
     </div>
 
-    <script>
-        const sign1 = 'red';
-        const sign2 = 'yellow';
-        const sign3 = 'green';
-
-        let sign = 'greensd';
-
-        if ( sign === sign1 ) {
-            console.log( 'Stand, do not cross the road' );
-        } else if ( sign === sign2 ) {
-            console.log( 'Attention, the traffic signal will change soon' );
-        } else if ( sign === sign3 ) {
-            console.log( 'You can cross the road' );
-        } else {
-            console.log( 'This is not a traffic signal' );
-        }
-
-        console.log( 'Alarm system' );
-        let door = true;
-        let alarmSystem = false;
-
-        if ( door ) {
-            if ( alarmSystem ) {
-                console.log( 'Alarm!!!' );
-            } else {
-                console.log( 'Door is open' );
-            }
-        } else {
-            if ( alarmSystem ) {
-                console.log( 'OK' );
-            } else {
-                console.log( 'Alarm system is off' );
-            }
-        }
-
-        let stud = {
-            age : 21,
-            name : 'Slavik',
-            surname : 'Vorontsov',
-        }
-
-        let person = {
-            name : 'Elena',
-            city : 'Kyiv',
-        }
-
-        console.log(stud.name);
-        console.log(person.city);
-        console.trace();
-
-        let testFunc = () => {
-            console.trace();
-        }
-        testFunc();
-
-        let a = { num : 2 };
-        let b = a.num;
-        a.num = 10;
-        console.log(a);
-        console.log(b);
-
-        let array = ['apple', 'banana', 'kiwi',];
-        let c = array[0];
-        console.log(c);
-
-        let a2 = 'apple';
-        console.log(a2 [3]);
-
-        let a3 = 0.1 + 0.2;
-        console.log(a3); 
-
-        let str = '10px';
-        let num1 = Number(str);
-        let num2 = parseInt(str);
-        let num3 = parseFloat(str, 8);
-        console.log(typeof str);
-        console.log(str);
-        console.log(typeof num1);
-        console.log(num2);
-
-        let str1 = 'abc';
-        let str2 = 'fde';
-        let str3 = str1 + str2;
-        console.log(str3);
-        let str4 = `${str1} ${str2}`;
-        console.log(str4);
-        
-    </script>
+    <script src="/scripts/main.js"></script>
 </body>
 
 </html>
